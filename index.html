@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Sankey Diagram with Filters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>User Flow Diagram</h2>
+        <div class="controls">
+            <button id="show-all-button">Show All</button>
+        </div>
+        <svg id="sankey-chart" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div class="sankey-tooltip"></div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
