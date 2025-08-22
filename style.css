@@ -1,0 +1,102 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #352055;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #2a1844;
+}
+
+.sankey-tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: #333;
+    color: #fff;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+.node rect {
+    fill-opacity: 0.9;
+    shape-rendering: crispEdges;
+    stroke-width: 0;
+    transition: fill-opacity 0.2s;
+}
+
+.node rect:hover {
+    fill-opacity: 1;
+}
+
+.link {
+    fill: none;
+    stroke-opacity: 0.6;
+    transition: stroke-opacity 0.2s;
+}
+
+.link:hover {
+    stroke-opacity: 0.8;
+}
+
+.node text {
+    pointer-events: none;
+    font-size: 12px;
+    font-weight: 500;
+    fill: #333;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .node text {
+        font-size: 10px;
+    }
+}
